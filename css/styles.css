@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+:root {
+    --color-fondo: #132123;
+    --color-texto: #4F9EC3;
+    --color-elemento: #2D5C7B;
+    --color-titulo: #3E7D9F; /* Color verde oscuro para el título */
+
+    --fuente-tomorrow: 'Tomorrow', sans-serif;
+    --font-size-base: 16px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    width: 100%;
+    overflow-x: hidden; /* Evita que el contenido desborde horizontalmente */
+}
+
+/* Estilos para el header */
+header {
+    background-color: var(--color-fondo); /* Ajusta o elimina esto si prefieres que el fondo sea transparente */
+    padding: 0; /* Elimina el padding si no es necesario */
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    position: fixed; /* Fijo en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+#header-img {
+    height: auto; /* Ajusta la altura automáticamente */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    object-fit: cover; /* Mantiene la proporción y asegura que la imagen llene el contenedor */
+}
+
+
+/* Espacio entre header y main */
+main {
+    margin-top: 100px; /* Incrementa el margen superior para asegurar que el contenido no quede tapado */
+    padding: 0 10px; /* Añade padding a los lados para mantener el contenido dentro de la pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo el contenido del main */
+    gap: 20px; /* Espacio entre elementos dentro del main */
+}
+
+.main-title {
+    color: var(--color-titulo);
+    font-family: var(--fuente-tomorrow);
+    font-size: 2rem; /* Ajusta el tamaño del título según sea necesario */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Apilar elementos en vista móvil y PC */
+    align-items: center; /* Centra los elementos dentro del contenedor */
+    gap: 20px; /* Espacio entre los elementos */
+    width: 100%;
+    max-width: 800px; /* Limita el ancho del contenedor */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el texto y los botones */
+    gap: 10px;
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--fuente-tomorrow);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+button {
+    background-color: var(--color-elemento);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--fuente-tomorrow);
+    font-size: var(--font-size-base);
+}
+
+button:hover {
+    background-color: var(--color-texto);
+}
+
+#output-text {
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--fuente-tomorrow);
+    resize: none;
+}
+
+footer {
+    background-color: var(--color-elemento);
+    color: white;
+    padding: 5px; /* Reduce el padding para hacer el footer más pequeño */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem; /* Ajusta el tamaño de la fuente si es necesario */
+    height: auto; /* Asegura que la altura se ajuste al contenido */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y altura */
+}
+
+.presentacion__enlaces {
+    display: flex;
+    flex-direction: row; /* Cambia a columna para mejor alineación en móvil */
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0; /* Añade margen para separar del resto del contenido */
+}
+
+.presentacion__enlaces__subtitulo {
+    font-family: var(--fuente-tomorrow);
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.presentacion__enlaces__link img {
+    width: 15px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
+.presentacion__enlaces__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 2px solid var(--color-texto);
+    width: auto; /* Cambia a 'auto' para que el ancho se ajuste al contenido */
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.2rem; /* Ajusta el tamaño de la fuente */
+    font-weight: 600;
+    padding: 10px 15px; /* Ajusta el padding */
+    text-decoration: none;
+    color: white;
+    font-family: var(--fuente-tomorrow);
+}
+
+.presentacion__enlaces__link:hover {
+    background-color: var(--color-texto);
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 600px) {
+    header {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+    #header-img {
+        max-height: 40px; /* Ajusta la altura máxima para pantallas pequeñas */
+    }
+
+    main {
+        margin-top: 100px; /* Ajusta el margen superior en móviles para asegurar visibilidad */
+        padding: 0 10px; /* Añade padding a los lados para mantener el contenido dentro de la pantalla */
+    }
+
+    .main-title {
+        font-size: 1.5rem; /* Ajusta el tamaño del título en móviles */
+        margin-bottom: 15px; /* Reduce el espacio debajo del título */
+    }
+
+    .container {
+        flex-direction: column; /* Apilar elementos en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+        gap: 20px; /* Espacio entre los elementos en vista móvil */
+    }
+
+    .text-container {
+        width: 100%;
+        max-width: 100%;
+        align-items: center; /* Centra el contenido dentro del text-container */
+        padding: 0 10px; /* Añade padding para evitar que el contenido toque los bordes */
+    }
+
+    .buttons {
+        flex-direction: column; /* Cambia los botones a columna en móviles */
+        gap: 10px; /* Espacio entre los botones */
+        width: 100%;
+        align-items: center; /* Centra los botones */
+    }
+
+    textarea {
+        max-width: 100%;
+    }
+
+    footer {
+        padding: 10px; /* Ajusta el padding del footer en móviles */
+    }
+
+    .presentacion__enlaces {
+        flex-direction: column; /* Apila los enlaces en vista móvil */
+    }
+}

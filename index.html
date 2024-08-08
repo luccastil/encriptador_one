@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Textos</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="./assets/alura.png" alt="Alura" id="header-img">
+        </header>
+        <h1 class="main-title">Encriptador de Textos</h1> <!-- Título movido al main -->
+        <div class="container">
+            <div class="text-container">
+                <p>Recuerde que el texto debe ser en minúsculas:</p>
+                <textarea id="input-text" placeholder="Escribe el texto aquí..."></textarea>
+                <div class="buttons">
+                    <button onclick="encryptText()">Encriptar</button>
+                    <button onclick="decryptText()">Desencriptar</button>
+                    <button onclick="copyText()">Copiar</button>
+                </div>
+                <textarea id="output-text" readonly></textarea>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="presentacion__enlaces">
+            <h2 class="presentacion__enlaces__subtitulo">Desarrollado por Lucia Castellanos Castillo</h2>
+            <a class="presentacion__enlaces__link" href="https://github.com/luccastil">
+                <img src="./assets/logo.png" alt="Github">
+                Github
+            </a>
+            <a class="presentacion__enlaces__link" href="https://www.linkedin.com/in/lucia-castellanos-castillo/">
+                <img src="./assets/linkedin.png" alt="LinkedIn">
+                Linkedin
+            </a>
+        </div>
+    </footer>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
