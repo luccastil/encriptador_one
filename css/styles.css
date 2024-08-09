@@ -20,38 +20,39 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-texto);
     width: 100%;
-    overflow-x: hidden; /* Evita que el contenido desborde horizontalmente */
+    overflow-x: hidden; /* Mantén el desbordamiento horizontal oculto */
+    overflow-y: auto; /* Asegura que el contenido pueda hacer scroll vertical */
+    padding-top: 100px; /* Deja espacio para el header */
+    padding-bottom: 60px; /* Deja espacio para el footer */
 }
 
-/* Estilos para el header */
 header {
-    background-color: var(--color-fondo); /* Ajusta o elimina esto si prefieres que el fondo sea transparente */
-    padding: 0; /* Elimina el padding si no es necesario */
+    background-color: var(--color-fondo);
+    padding: 0;
     display: flex;
-    justify-content: center; /* Centra la imagen horizontalmente */
-    position: fixed; /* Fijo en la parte superior */
+    justify-content: center;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
-    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
-    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    width: 100%;
+    z-index: 1000;
 }
 
 #header-img {
-    height: auto; /* Ajusta la altura automáticamente */
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
-    object-fit: cover; /* Mantiene la proporción y asegura que la imagen llene el contenedor */
+    height: auto;
+    width: 100%;
+    object-fit: cover;
 }
 
-
-/* Espacio entre header y main */
+/* Main */
 main {
-    margin-top: 100px; /* Incrementa el margen superior para asegurar que el contenido no quede tapado */
-    padding: 0 10px; /* Añade padding a los lados para mantener el contenido dentro de la pantalla */
+    padding: 0 10px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra todo el contenido del main */
-    gap: 20px; /* Espacio entre elementos dentro del main */
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px; /* Un poco de espacio superior */
+    margin-bottom: 200px;
 }
 
 .main-title {
@@ -122,17 +123,17 @@ button:hover {
     resize: none;
 }
 
+/* Footer fijo en la parte inferior */
 footer {
     background-color: var(--color-elemento);
     color: white;
-    padding: 5px; /* Reduce el padding para hacer el footer más pequeño */
+    padding: 5px;
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
-    font-size: 0.8rem; /* Ajusta el tamaño de la fuente si es necesario */
-    height: auto; /* Asegura que la altura se ajuste al contenido */
-    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y altura */
+    font-size: 0.8rem;
+    box-sizing: border-box;
 }
 
 .presentacion__enlaces {
